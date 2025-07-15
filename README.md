@@ -14,13 +14,6 @@
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-bom</artifactId>
-            <version>${spring-ai.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-        <dependency>
             <groupId>io.opentelemetry.instrumentation</groupId>
             <artifactId>opentelemetry-instrumentation-bom</artifactId>
             <version>2.16.0</version>
@@ -88,16 +81,7 @@ registerInstrumentations({
 
 ```tsx
 import "./services/otel.ts";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+...
 ```
 
 ## Deploy the SigNoz Helm Chart to a Minikube cluster
